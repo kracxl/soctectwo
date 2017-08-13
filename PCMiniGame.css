@@ -1,0 +1,19 @@
+#PCMiniGame {
+	display: inline-block;
+	background-color: rgb(172, 172, 172);
+	width: 1280px;
+	height: 720px;
+	margin: 20px;
+}
+
+.puzzledarkened {
+	display: inline-block;
+	position: absolute;
+	z-index: 0;
+}
+
+.puzzle {
+	display: inline-block;
+	position: absolute;
+	z-index: 1;
+}
