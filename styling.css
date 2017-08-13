@@ -1,0 +1,14 @@
+body{
+	background-color: #ff00ff;
+}
+.question{
+	text-align: center;
+	color: #ffffff;
+	font-size: 50px;
+}
+.answer{
+	margin-left: 200px;
+	margin-right: 200px;
+	color: #ff0000;
+	font-size: 25px;
+}
