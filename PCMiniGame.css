@@ -2,6 +2,12 @@
 	margin: 0;
 }
 
+#gamewin {
+	color: white;
+	font-size: 50px;
+	margin-bottom: 50px;
+}
+
 #PCMiniGame {
 	display: inline-block;
 	background-color: rgba(0,0,0,0);

@@ -1,3 +1,8 @@
+var b1 = false;
+var b2 = false;
+var b3 = false;
+var b4 = false;
+
 var game = function () {
 
 	function drag (piece, start, stop) {
@@ -41,44 +46,52 @@ var game = function () {
 					self.piece.style.top = topOrigin + e.clientY - mouseDownY + "px";
 				
 				if (self.piece.id == "processorpiece") {
+					b1 = false;
 					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 24 &&
 						point1 + self.piece.clientWidth/2 <= dpoffset.left + 140 &&
 						point3 + self.piece.clientHeight/2 >= dpoffset.top + 20 &&
 						point3 + self.piece.clientHeight/2 <= dpoffset.top + 254) {
-							
+						
+						b1 = true;
 						self.piece.style.left = dpoffset.left + 24;
 						self.piece.style.top = dpoffset.top + 20;
 					}
 				}
 				
 				if (self.piece.id == "monitorpiece") {
+					b2 = false;
 					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 186 &&
 						point1 + self.piece.clientWidth/2 <= dpoffset.left + 379 &&
 						point3 + self.piece.clientHeight/2 >= dpoffset.top + 40 &&
 						point3 + self.piece.clientHeight/2 <= dpoffset.top + 226) {
 							
+						b2=true;
 						self.piece.style.left = dpoffset.left + 186;
 						self.piece.style.top = dpoffset.top + 40;
 					}
 				}
 				
 				if (self.piece.id == "keyboardpiece") {
+					b3=false;
 					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 163 &&
 						point1 + self.piece.clientWidth/2 <= dpoffset.left + 420 &&
 						point3 + self.piece.clientHeight/2 >= dpoffset.top + 220 &&
 						point3 + self.piece.clientHeight/2 <= dpoffset.top + 275) {
-							
+						
+						b3=true;
 						self.piece.style.left = dpoffset.left + 163;
 						self.piece.style.top = dpoffset.top + 220;
 					}
 				}
 				
 				if (self.piece.id == "mousepiece") {
+					b4 = false;
 					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 425 &&
 						point1 + self.piece.clientWidth/2 <= dpoffset.left + 485 &&
 						point3 + self.piece.clientHeight/2 >= dpoffset.top + 228 &&
 						point3 + self.piece.clientHeight/2 <= dpoffset.top + 255) {
-							
+						
+						b4= true;
 						self.piece.style.left = dpoffset.left + 425;
 						self.piece.style.top = dpoffset.top + 228;
 					}
@@ -93,6 +106,11 @@ var game = function () {
 				if(self.stop !== undefined) { 
 					self.stop();
 				}
+				
+				if (b1 && b2 && b3 && b4)
+					$("#gamewin").html ("YOU WIN!");
+				else 
+					$("#gamewin").html ("");
 				e.stopPropagation();
 			}
 
