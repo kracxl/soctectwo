@@ -107,10 +107,12 @@ var game = function () {
 					self.stop();
 				}
 				
-				if (b1 && b2 && b3 && b4)
+				if (b1 && b2 && b3 && b4) {
 					$("#gamewin").html ("Good Job!");
-				else 
+				}
+				else {
 					$("#gamewin").html ("");
+				}
 				e.stopPropagation();
 			}
 
