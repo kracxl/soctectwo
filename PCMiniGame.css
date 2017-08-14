@@ -1,11 +1,10 @@
 * {
 	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 #gamewin {
 	color: white;
-	font-size: 50px;
-	margin-bottom: 50px;
 }
 
 #PCMiniGame {

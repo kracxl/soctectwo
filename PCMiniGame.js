@@ -108,7 +108,7 @@ var game = function () {
 				}
 				
 				if (b1 && b2 && b3 && b4)
-					$("#gamewin").html ("YOU WIN!");
+					$("#gamewin").html ("Good Job!");
 				else 
 					$("#gamewin").html ("");
 				e.stopPropagation();
