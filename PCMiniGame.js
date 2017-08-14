@@ -20,21 +20,70 @@ var game = function () {
 			var mouseDownY = e.clientY;
 
 			function pickUp (e) {
+				var point1 = leftOrigin + e.clientX - mouseDownX;
+				var point3 = topOrigin + e.clientY - mouseDownY;
+				var dp = document.getElementById ("puzzledarkened");
+				var dpoffset = $("#puzzledarkened").offset ();
 				var divoffset = $("#PCMiniGame").offset ();
 				
-				if (leftOrigin + e.clientX - mouseDownX < divoffset.left)
+				if (point1 < divoffset.left)
 					self.piece.style.left = divoffset.left;
-				else if (leftOrigin + e.clientX - mouseDownX > divoffset.left + 1280 - self.piece.clientWidth)
+				else if (point1 > divoffset.left + 1280 - self.piece.clientWidth)
 					self.piece.style.left = divoffset.left + 1280 - self.piece.clientWidth;
 				else
 					self.piece.style.left = leftOrigin + e.clientX - mouseDownX + "px";
 				
-				if (topOrigin + e.clientY - mouseDownY < divoffset.top)
+				if (point3 < divoffset.top)
 					self.piece.style.top = divoffset.top;
-				else if (topOrigin + e.clientY - mouseDownY > divoffset.top + 720 - self.piece.clientHeight)
+				else if (point3 > divoffset.top + 720 - self.piece.clientHeight)
 					self.piece.style.top = divoffset.top + 720 - self.piece.clientHeight;
 				else
 					self.piece.style.top = topOrigin + e.clientY - mouseDownY + "px";
+				
+				if (self.piece.id == "processorpiece") {
+					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 24 &&
+						point1 + self.piece.clientWidth/2 <= dpoffset.left + 140 &&
+						point3 + self.piece.clientHeight/2 >= dpoffset.top + 20 &&
+						point3 + self.piece.clientHeight/2 <= dpoffset.top + 254) {
+							
+						self.piece.style.left = dpoffset.left + 24;
+						self.piece.style.top = dpoffset.top + 20;
+					}
+				}
+				
+				if (self.piece.id == "monitorpiece") {
+					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 186 &&
+						point1 + self.piece.clientWidth/2 <= dpoffset.left + 379 &&
+						point3 + self.piece.clientHeight/2 >= dpoffset.top + 40 &&
+						point3 + self.piece.clientHeight/2 <= dpoffset.top + 226) {
+							
+						self.piece.style.left = dpoffset.left + 186;
+						self.piece.style.top = dpoffset.top + 40;
+					}
+				}
+				
+				if (self.piece.id == "keyboardpiece") {
+					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 163 &&
+						point1 + self.piece.clientWidth/2 <= dpoffset.left + 420 &&
+						point3 + self.piece.clientHeight/2 >= dpoffset.top + 220 &&
+						point3 + self.piece.clientHeight/2 <= dpoffset.top + 275) {
+							
+						self.piece.style.left = dpoffset.left + 163;
+						self.piece.style.top = dpoffset.top + 220;
+					}
+				}
+				
+				if (self.piece.id == "mousepiece") {
+					if (point1 + self.piece.clientWidth/2 >= dpoffset.left + 425 &&
+						point1 + self.piece.clientWidth/2 <= dpoffset.left + 485 &&
+						point3 + self.piece.clientHeight/2 >= dpoffset.top + 228 &&
+						point3 + self.piece.clientHeight/2 <= dpoffset.top + 255) {
+							
+						self.piece.style.left = dpoffset.left + 425;
+						self.piece.style.top = dpoffset.top + 228;
+					}
+				}
+				
 				e.stopPropagation();
 			}
 
@@ -80,7 +129,6 @@ var game = function () {
 	mousepiece.style.left = divoffset.left + 1280/2 - mousepiece.clientWidth - keyboardpiece.clientWidth + "px";
 	mousepiece.style.top = divoffset.top + 720 - 50 - mousepiece.clientHeight + "px";
 	
-	
 	var p1 = new drag(processorpiece,start,stop);
 	var p2 = new drag(monitorpiece,start,stop);
 	var p3 = new drag(keyboardpiece,start,stop);
@@ -94,4 +142,4 @@ window.onload = function () {
 	var divoffset = $("#PCMiniGame").offset ();
 	dp.style.left = divoffset.left + (1280 - dp.clientWidth)/2 + "px";
 	dp.style.top = divoffset.top + 50 + "px";
-}
+};
