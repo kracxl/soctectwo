@@ -14,97 +14,17 @@
         text-align: center;
     }
     #what, #pb, #pt, #md, #gm, #ed {
-        font-size: 45px;
+        font-size: 35px;
         margin-bottom: 10px;
     }
     #what1, #pb1, #gm1, #ed1 {
-        font-size: 20px;
+        font-size: 15px;
         margin: auto;
         width: 900px;
     }
-    #partspic {
-        background-image: url("all.png");
-        background-repeat: no-repeat;
-        width: 97%;
-        height: 110%;
+    #hardware {
         margin: auto;
-        position: relative;
-    }
-    #case1 {
-        margin-left: 8px;
-        width: 320px;
-        height: 410px;
-        opacity: 0;
-        position: absolute;
-    }
-    #mon1 {
-        margin: 70px;
-        margin-left: 360px;
-        width: 392px;
-        height: 320px;
-        opacity: 0;
-        position: absolute;
-    }
-    #print1 {
-        margin: 100px;
-        margin-top: 110px;
-        margin-left: 800px;
-        width: 431px;
-        height: 198px;
-        opacity: 0;
-        position: absolute;
-    }
-    #kb1 {
-        margin: 10px;
-        margin-top: 475px;
-        width: 591px;
-        height: 170px;
-        opacity: 0;
-        position: absolute;
-    }
-    #speak1 {
-        margin: 10px;
-        margin-left: 635px;
-        margin-top: 419px;
-        width: 287px;
-        height: 220px;
-        opacity: 0;
-        position: absolute;
-    }
-    #mou1 {
-        margin: 10px;
-        margin-left: 975px;
-        margin-top: 530px;
-        width: 154px;
-        height: 110px;
-        opacity: 0;
-        position: absolute;
-    }
-    #mic1 {
-        margin: 10px;
-        margin-left: 1140px;
-        margin-top: 387px;
-        width: 118px;
-        height: 250px;
-        opacity: 0;
-        position: absolute;
-    }
-    #mic2 {
-        margin: 10px;
-        margin-left: 1080px;
-        margin-top: 387px;
-        width: 50px;
-        height: 50px;
-        opacity: 0;
-        position: absolute;
-    }
-    #case {
-        //-webkit-font-smoothing: antialiased;
-        //transition-duration: 0.20s;
-    }
-    #case:hover {
-        //transform: scale(1.2);
-        //background-color: transparent;
+        width: 1200px;
     }
 </style>
 </head>
@@ -124,124 +44,118 @@
     <div id="pt">Parts of computer</div>
 </div>
 
-<div align="center">
+<div id="hardware" align="center">
     <table>
         <tr >
-            <td id="case" align="center"><img src="case.png" height="250"/></td>
-            <td>
+            <td align="center"><img src="case.png" height="250"/></td>
+            <td style="text-align: justify;">
                 This is the system unit.<br> This contains and protects all the parts needed by the computer to process data.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="mon.png" height="250"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the monitor.<br> This is where you see everything that the computer does.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="print.png" height="180"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the printer.<br> It is an output device you use to create a hardcopy of your documents.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="kb.png" height="180"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the keyboard.<br> It is an input device you use to type your documents.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="speak.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the speaker.<br> It is an output device you can use to listen to music.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="mou.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the mouse.<br> It is an input device you can use to point and click the things you see on the monitor.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="mic.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the microphone.<br> It is an input device you use to talk to other people.
             </td>
         </tr>
     </table>
 </div>
 
+<br>
 <div id="made">
     <div id="md">Let's go inside the system unit!</div>
 </div>
 
-<div align="center">
+<div id="hardware" border=1px align="center">
     <table>
-        <tr >
+        <tr>
             <td align="center"><img src="mobo.png" height="250"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the motherboard.<br> It is a medium for all the parts of the system unit to communicate with one another.
             </td>
         </tr>
         <tr>
-            <td align="center"><img src="cpu.png" height="250"/></td>
-            <td>
+            <td align="center"><img src="cpu.png" height="200"/></td>
+            <td style="text-align: justify;">
                 This is the CPU or the Central Processing Unit.<br> This is the brain of the computer. It does all the computations needed by the computer.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="ram.png" height="180"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the RAM or the Random Access Memory.<br> This is the primary memory used by the computer to process data. This memory is not permanent and the computer forgets the data written here after the program finishes.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="gfx.png" height="180"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the GPU or the Graphics Processing Unit.<br> This is generally used by gamers and designers to process graphics faster. It takes the job of processing the graphics and makes the job of the CPU easier.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="hdd.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the HDD or the Hard Disk Drive.<br> This is the secondary memory where you can store your files. There are also portable versions of this called an External Hard Drive.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="ssd.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the SSD or the Solid State Drive.<br> This is faster than a HDD but also more expensive. This is usually used by computers so that the operating system would load faster.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="drive.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the CD-ROM.<br> You can insert a CD here to store data.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="sfan.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the fan.<br> This is used by the system unit to prevent the computer from overheating.
             </td>
         </tr>
         <tr>
             <td align="center"><img src="psu.png" height="200"/></td>
-            <td>
+            <td style="text-align: justify;">
                 This is the PSU or the Power Supply Unit.<br> It is needed to power the computer.
             </td>
         </tr>
     </table>
 </div>
 
-<div id="game">
-    <div id="gm">Let's build a computer!</div>
-    <div id="gm1">drag n drop those components!</div>
-</div>
-
-<iframe id="games" src="game.html" width="1280" height="720" style="border: 0; margin: 0" align="middle" scrolling="no"></iframe>
-
-<div id="computerLanguage">
+<div id="computerLanguage" style="text-align: justify;">
 Thinking like a Computer
 
 Have you ever wondered why computers speak binary? 
@@ -256,7 +170,12 @@ And this can expand infinitely and programmers gave these states meaning so that
 
 </div>
 
+<div id="game">
+    <div id="gm">Let's build a computer!</div>
+    <div id="gm1">drag n drop those components!</div>
+</div>
 
+<iframe id="games" src="game.html" width="1280" height="720" style="border: 0; margin: 0" align="middle" scrolling="no"></iframe>
 
 <div id="end">
     <div id="ed">THANK YOU FOR READING</div>
